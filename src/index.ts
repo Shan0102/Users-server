@@ -54,6 +54,8 @@ async function setLastId(): Promise<void> {
 }
 
 function validateUser(user: PostUser): user is PostUser {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
     if (!user.name || !user.email || !user.username) return false;
     return (
         typeof user.username === "string" &&
@@ -61,7 +63,8 @@ function validateUser(user: PostUser): user is PostUser {
         typeof user.name === "string" &&
         user.name.trim() !== "" &&
         typeof user.email === "string" &&
-        user.email.trim() !== ""
+        user.email.trim() !== "" &&
+        emailRegex.test(user.email)
     );
 }
 const app: Express = express();
