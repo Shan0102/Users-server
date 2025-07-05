@@ -2,4 +2,3 @@ node_modules/
 public/script/
 dist/
 .env
-package-lock.json
