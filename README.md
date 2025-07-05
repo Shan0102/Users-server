@@ -1,17 +1,35 @@
-# Express local storage
+# Express_FS Project
 
-Backend using express and fs module to read and write from local users.json file
+This project is a simple user management web application built with Express.js and TypeScript. It uses the Node.js `fs` module to read and write user data to a local `users.json` file.
 
-Frontend to fetch requests to backend
+The frontend interacts with the backend via fetch requests to manage users.
 
-## installation
+## Features
 
-```
+-   View all users
+-   Create a new user
+-   Data is stored locally in `data/users.json`
+-   Simple HTML/CSS/JS frontend
+
+## Installation
+
+```bash
 npm install
 npm run build
 npm start
 ```
 
-## stack
+## Stack
 
-Express, fs module, path module, TS,
+-   Express.js
+-   TypeScript
+-   Node.js `fs` and `path` modules
+
+## Project Structure
+
+-   `src/` - Backend source code (Express app, routers, controllers, services)
+-   `public/` - Frontend static files (HTML, CSS, JS)
+-   `data/` - Local JSON data storage
+-   `views/` - HTML views
+
+---
